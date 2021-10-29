@@ -21,3 +21,8 @@ Luckily it is very easy to use
 
 `./jupyter-lint.sh <filename> -s` - Runs the script in `simple` mode which basically only outputs what is wrong and the rating, without all of the other tables pylint spits out.
 
+### Options
+- `-s` - Runs the script in `simple` mode which basically only outputs what is wrong and the rating, without all of the other tables pylint spits out.
+- `-v` - Displays the version
+- `-h` - Displays the help screen
+

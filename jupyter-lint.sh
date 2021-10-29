@@ -7,11 +7,14 @@ INSTALL () {
 }
 
 HELP () {
+    echo "Jupyter Lint V1"
     echo "Usage:"
     echo "./jupyter-lint.sh <jupyter file> [options]"
     echo ""
     echo "Options: "
-    echo "-s Simplify - Removes all of the other aspects of the pylint output, so that you can see just the score and issues."
+    echo "-s - Removes all of the other aspects of the pylint output, so that you can see just the score and issues."
+    echo "-h - Display the usage for the script"
+    echo "-v - Displays the version of the script"
 }
 
 
@@ -26,6 +29,10 @@ then
         case $option in
             -h) # Display Help
                 HELP
+                exit
+            ;;
+            -v) # Display version
+                echo "Version: jupyter-lint v1.0"
                 exit
             ;;
             -i) # Install
