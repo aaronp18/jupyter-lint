@@ -1,5 +1,21 @@
 #/bin/bash
 
+INSTALL () {
+    echo Installing depenencies...
+    echo I havent actually added installing of dependices yet, you just kinda need `node`. The version shouldnt matter. Ill change this to python when I get the chance
+    
+}
+
+HELP () {
+    echo "Usage:"
+    echo "./jupyter-lint.sh <jupyter file> [options]"
+    echo ""
+    echo "Options: "
+    echo "-s Simplify - Removes all of the other aspects of the pylint output, so that you can see just the score and issues."
+}
+
+
+
 if [ $# -ge 1 ]
 then
     # Options
@@ -9,10 +25,11 @@ then
     do
         case $option in
             -h) # Display Help
-                echo "HELP"
+                HELP
+                exit
             ;;
             -i) # Install
-                echo "Installing depenencies"
+                INSTALL
             ;;
             -s) # Simplify mode
                 SIMPLIFY=1
@@ -71,18 +88,6 @@ then
     
     
 else
-    echo "Usage:"
-    echo "./runPylint.sh <jupyter file>"
-    echo ""
-    echo "Options: "
-    # echo "-r replace: Basically replaces  "
-    echo "-s Simplify - Removes all of the other aspects of the pylint output, so that you can see just the score and issues."
+    HELP
 fi
 
-
-
-INSTALL () {
-    echo Installing depenencies...
-    echo I havent actually added installing of dependices yet, you just kinda need `node`. The version shouldnt matter. Ill change this to python when I get the chance
-    
-}
